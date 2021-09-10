@@ -47,7 +47,7 @@ app.put('/api/roles/:id',
 
 // this is for generic /api
 app.get('/api/:collection',  RequestHandler(CollectionController.getMany));
-app.post('/api/:collection', AuthHandler.VerifyToken, RequestHandler(CollectionController.post));
+app.post('/api/:collection',RequestHandler(CollectionController.post));
 app.delete('/api/:collection', AuthHandler.VerifyToken, RequestHandler(CollectionController.delete));
 
 app.get('/api/:collection/:id', RequestHandler(CollectionController.getOne));
